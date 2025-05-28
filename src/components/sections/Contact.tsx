@@ -42,26 +42,34 @@ export default function ContactSection() {
               </div>
               <div className="pt-4">
                 <p className="font-semibold text-base mb-3">Social Profiles</p>
-                <div className="flex gap-3">
-                  <Link href="https://github.com/phuctran2703" target="_blank" rel="noopener noreferrer">
-                    <Button
-                      variant="outline"
-                      size="icon"
-                      className="rounded-full transition-all duration-300 hover:bg-accent hover:scale-110 hover:bg-blue-500 hover:text-white hover:cursor-pointer text-blue-600"
-                    >
-                      <Github className="h-5 w-5" />
-                      <span className="sr-only">GitHub</span>
-                    </Button>
-                  </Link>
-                  <Link href="https://www.linkedin.com/in/phuc-tran-29b650353/" target="_blank" rel="noopener noreferrer">
-                    <Button
-                      variant="outline"
-                      size="icon"
-                      className="rounded-full transition-all duration-300 hover:bg-accent hover:scale-110 hover:bg-blue-500 hover:text-white hover:cursor-pointer text-blue-600"
-                    >
-                      <Linkedin className="h-5 w-5" />
-                      <span className="sr-only">LinkedIn</span>
-                    </Button>
+                <div className="flex gap-3">                  <Link href="https://github.com/phuctran2703" target="_blank" rel="noopener noreferrer">
+                    <div className="relative group">
+                      <Button
+                        variant="outline"
+                        size="icon"
+                        className="rounded-full transition-all duration-300 hover:bg-accent hover:scale-110 hover:bg-blue-500 hover:text-white hover:cursor-pointer text-blue-600"
+                      >
+                        <Github className="h-5 w-5" />
+                        <span className="sr-only">GitHub</span>
+                      </Button>
+                      <div className="absolute -top-8 left-1/2 -translate-x-1/2 bg-black text-white px-2 py-1 rounded text-xs opacity-0 group-hover:opacity-100 transition-opacity">
+                        GitHub
+                      </div>
+                    </div>
+                  </Link>                  <Link href="https://www.linkedin.com/in/phuc-tran-29b650353/" target="_blank" rel="noopener noreferrer">
+                    <div className="relative group">
+                      <Button
+                        variant="outline"
+                        size="icon"
+                        className="rounded-full transition-all duration-300 hover:bg-accent hover:scale-110 hover:bg-blue-500 hover:text-white hover:cursor-pointer text-blue-600"
+                      >
+                        <Linkedin className="h-5 w-5" />
+                        <span className="sr-only">LinkedIn</span>
+                      </Button>
+                      <div className="absolute -top-8 left-1/2 -translate-x-1/2 bg-black text-white px-2 py-1 rounded text-xs opacity-0 group-hover:opacity-100 transition-opacity">
+                        LinkedIn
+                      </div>
+                    </div>
                   </Link>
                 </div>
               </div>
