@@ -107,7 +107,7 @@ export default function IntroduceSection() {
           </div>
         </div>
 
-        <div className="w-1/3 flex items-center justify-center order-1 lg:order-2 mb-8 lg:mb-0">
+        <div className="w-1/3 flex items-center justify-center order-1 lg:order-2 mb-8 lg:mb-0 pt-10 md:pt-0">
           <Avatar className="h-48 w-48 md:h-64 md:w-64 rounded-full border-4 border-blue-600 dark:border-blue-400 shadow-lg">
             <AvatarImage src="/mee.png?height=192&width=192" alt="TBP" />
             <AvatarFallback className="text-4xl">TBP</AvatarFallback>
