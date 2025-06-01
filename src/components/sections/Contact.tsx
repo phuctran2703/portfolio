@@ -3,6 +3,7 @@
 import { Button } from "@/components/ui/button"
 import { Github, Linkedin, Mail, MapPin, Phone } from "lucide-react"
 import Link from "next/link"
+import { personalInfo } from "@/data/resume"
 
 export default function ContactSection() {
   return (
@@ -28,7 +29,7 @@ export default function ContactSection() {
                 </Button>
                 <div>
                   <p className="font-semibold text-base">Email</p>
-                  <p className="text-sm text-muted-foreground">tranbaophuc2703@gmail.com</p>
+                  <p className="text-sm text-muted-foreground">{personalInfo.email}</p>
                 </div>
               </div>
               <div className="flex items-center gap-4">
@@ -37,12 +38,12 @@ export default function ContactSection() {
                 </Button>
                 <div>
                   <p className="font-semibold text-base">Phone</p>
-                  <p className="text-sm text-muted-foreground">0944926168</p>
+                  <p className="text-sm text-muted-foreground">{personalInfo.phone}</p>
                 </div>
-              </div>
-              <div className="pt-4">
+              </div>              <div className="pt-4">
                 <p className="font-semibold text-base mb-3">Social Profiles</p>
-                <div className="flex gap-3">                  <Link href="https://github.com/phuctran2703" target="_blank" rel="noopener noreferrer">
+                <div className="flex gap-3">
+                  <Link href={personalInfo.socials.github} target="_blank" rel="noopener noreferrer">
                     <div className="relative group">
                       <Button
                         variant="outline"
@@ -56,7 +57,8 @@ export default function ContactSection() {
                         GitHub
                       </div>
                     </div>
-                  </Link>                  <Link href="https://www.linkedin.com/in/phuc-tran-29b650353/" target="_blank" rel="noopener noreferrer">
+                  </Link>
+                  <Link href={personalInfo.socials.linkedin} target="_blank" rel="noopener noreferrer">
                     <div className="relative group">
                       <Button
                         variant="outline"
@@ -75,7 +77,7 @@ export default function ContactSection() {
               </div>
             </div>
           </div>
-          
+
           {/* Send Message Card */}
           <div className="rounded-lg border border-gray-100 bg-card text-card-foreground shadow-sm">
             <div className="flex flex-col space-y-1.5 p-6 pb-2">

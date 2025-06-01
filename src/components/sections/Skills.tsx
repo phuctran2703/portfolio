@@ -1,5 +1,7 @@
 "use client";
 
+import { skills } from "@/data/resume";
+
 const SkillBadge = ({ name }: { name: string }) => {
   return (
     <span className="bg-blue-600 dark:bg-blue-700 hover:bg-blue-700 dark:hover:bg-blue-600 text-white rounded-lg px-2 py-0.5 text-sm font-medium shadow-sm hover:shadow-md transition-all duration-300 hover:-translate-y-1 text-xs">
@@ -29,58 +31,74 @@ export default function SkillsSection() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-x-12 gap-y-10">
             <div>
               <ul className="space-y-6">
-                <li>
-                  <CategoryHeading title="Languages" />
-                  <div className="flex flex-wrap gap-2 mt-2">
-                    <SkillBadge name="Python" />
-                    <SkillBadge name="Java" />
-                    <SkillBadge name="C++" />
-                  </div>
-                </li>
-                <li className="mt-4">
-                  <CategoryHeading title="Database" />
-                  <div className="flex flex-wrap gap-2 mt-2">
-                    <SkillBadge name="MySQL" />
-                    <SkillBadge name="SQL Server" />
-                    <SkillBadge name="MongoDB" />
-                  </div>
-                </li>
-                <li className="mt-4">
-                  <CategoryHeading title="Big Data" />
-                  <div className="flex flex-wrap gap-2 mt-2">
-                    <SkillBadge name="Apache Hadoop" />
-                    <SkillBadge name="Apache Spark" />
-                  </div>
-                </li>
+                {skills.languages && skills.languages.length > 0 && (
+                  <li>
+                    <CategoryHeading title="Languages" />
+                    <div className="flex flex-wrap gap-2 mt-2">
+                      {skills.languages.map((lang, index) => (
+                        <SkillBadge key={index} name={lang} />
+                      ))}
+                    </div>
+                  </li>
+                )}
+
+                {skills.database && skills.database.length > 0 && (
+                  <li className="mt-4">
+                    <CategoryHeading title="Database" />
+                    <div className="flex flex-wrap gap-2 mt-2">
+                      {skills.database.map((db, index) => (
+                        <SkillBadge key={index} name={db} />
+                      ))}
+                    </div>
+                  </li>
+                )}
+
+                {skills.bigData && skills.bigData.length > 0 && (
+                  <li className="mt-4">
+                    <CategoryHeading title="Big Data" />
+                    <div className="flex flex-wrap gap-2 mt-2">
+                      {skills.bigData.map((tech, index) => (
+                        <SkillBadge key={index} name={tech} />
+                      ))}
+                    </div>
+                  </li>
+                )}
               </ul>
             </div>
             <div>
               <ul className="space-y-6">
-                <li>
-                  <CategoryHeading title="Web Development" />
-                  <div className="flex flex-wrap gap-2 mt-2">
-                    <SkillBadge name="HTML/CSS" />
-                    <SkillBadge name="JavaScript" />
-                    <SkillBadge name="React" />
-                    <SkillBadge name="Next.js" />
-                  </div>
-                </li>
-                <li className="mt-4">
-                  <CategoryHeading title="AI/ML" />
-                  <div className="flex flex-wrap gap-2 mt-2">
-                    <SkillBadge name="TensorFlow" />
-                    <SkillBadge name="PyTorch" />
-                    <SkillBadge name="Scikit-learn" />
-                  </div>
-                </li>
-                <li className="mt-4">
-                  <CategoryHeading title="DevOps" />
-                  <div className="flex flex-wrap gap-2 mt-2">
-                    <SkillBadge name="Git" />
-                    <SkillBadge name="Docker" />
-                    <SkillBadge name="CI/CD" />
-                  </div>
-                </li>
+                {skills.webDevelopment && skills.webDevelopment.length > 0 && (
+                  <li>
+                    <CategoryHeading title="Web Development" />
+                    <div className="flex flex-wrap gap-2 mt-2">
+                      {skills.webDevelopment.map((web, index) => (
+                        <SkillBadge key={index} name={web} />
+                      ))}
+                    </div>
+                  </li>
+                )}
+
+                {skills.aiml && skills.aiml.length > 0 && (
+                  <li className="mt-4">
+                    <CategoryHeading title="AI/ML" />
+                    <div className="flex flex-wrap gap-2 mt-2">
+                      {skills.aiml.map((ai, index) => (
+                        <SkillBadge key={index} name={ai} />
+                      ))}
+                    </div>
+                  </li>
+                )}
+
+                {skills.devOps && skills.devOps.length > 0 && (
+                  <li className="mt-4">
+                    <CategoryHeading title="DevOps" />
+                    <div className="flex flex-wrap gap-2 mt-2">
+                      {skills.devOps.map((devOps, index) => (
+                        <SkillBadge key={index} name={devOps} />
+                      ))}
+                    </div>
+                  </li>
+                )}
               </ul>
             </div>
           </div>

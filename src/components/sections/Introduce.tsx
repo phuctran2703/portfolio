@@ -4,6 +4,8 @@ import { Button } from "@/components/ui/button";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Github, Linkedin, Mail, ExternalLink } from "lucide-react";
 import Link from "next/link";
+import { personalInfo } from "@/data/resume";
+import ImageStack from "@/components/imageStack";
 
 export default function IntroduceSection() {
   return (
@@ -17,18 +19,14 @@ export default function IntroduceSection() {
             <h1 className="text-3xl md:text-4xl lg:text-6xl font-extrabold tracking-tight text-center lg:text-left">
               Hi, I'm{" "}
               <span className="text-blue-600 dark:text-blue-400">
-                Tran Bao Phuc
+                {personalInfo.name}
               </span>
             </h1>
             <h2 className="text-xl md:text-2xl lg:text-3xl font-medium text-muted-foreground dark:text-gray-300 text-center lg:text-left">
-              Final year student in HCMUT
+              {personalInfo.title}
             </h2>
             <p className="text-base lg:text-lg text-muted-foreground leading-relaxed md:leading-loose text-justify dark:text-gray-300">
-              I have a genuine interest in AI and software development. I enjoy
-              working on projects that create practical solutions and provide
-              real value. I am eager to find opportunities where I can apply my
-              knowledge in practical environments and contribute meaningfully to
-              the success of a team.
+              {personalInfo.description}
             </p>
             <div className="flex flex-col sm:flex-row justify-center lg:justify-between gap-4">
               <div className="flex flex-col sm:flex-row justify-center lg:justify-start gap-4">
@@ -55,7 +53,7 @@ export default function IntroduceSection() {
                   className="rounded-full group relative"
                 >
                   <Link
-                    href="https://github.com/phuctran2703"
+                    href={personalInfo.socials.github}
                     target="_blank"
                     rel="noopener noreferrer"
                   >
@@ -73,7 +71,7 @@ export default function IntroduceSection() {
                   className="rounded-full group relative"
                 >
                   <Link
-                    href="https://www.linkedin.com/in/phuc-tran-29b650353/"
+                    href={personalInfo.socials.linkedin}
                     target="_blank"
                     rel="noopener noreferrer"
                   >
@@ -91,7 +89,7 @@ export default function IntroduceSection() {
                   className="rounded-full group relative"
                 >
                   <a
-                    href="mailto:tranbaophuc2703@gmail.com"
+                    href={`mailto:${personalInfo.email}`}
                     target="_blank"
                     rel="noopener noreferrer"
                   >
@@ -101,17 +99,30 @@ export default function IntroduceSection() {
                       Email
                     </span>
                   </a>
-                </Button>
+                </Button>{" "}
               </div>
             </div>
           </div>
         </div>
-
-        <div className="w-1/3 flex items-center justify-center order-1 lg:order-2 mb-8 lg:mb-0 pt-10 md:pt-0">
-          <Avatar className="h-48 w-48 md:h-64 md:w-64 rounded-full border-4 border-blue-600 dark:border-blue-400 shadow-lg">
-            <AvatarImage src="/mee.png?height=192&width=192" alt="TBP" />
-            <AvatarFallback className="text-4xl">TBP</AvatarFallback>
-          </Avatar>
+        <div className="flex-1 flex justify-center order-1 lg:order-2">
+          <div className="relative">
+            {/* <Avatar className="w-60 h-60 md:w-72 md:h-72 rounded-full border-4 border-blue-500 dark:border-blue-400 shadow-xl overflow-hidden">
+              <AvatarImage
+                src="/me.png"
+                alt={personalInfo.name}
+                className="object-cover"
+              />
+              <AvatarFallback className="text-6xl font-bold">
+                {personalInfo.name
+                  .split(" ")
+                  .map((n) => n[0])
+                  .join("")}
+              </AvatarFallback>
+            </Avatar> */}
+            <div className="pt-8 lg:pt-0">
+            <ImageStack/>
+            </div>
+          </div>
         </div>
       </div>
     </section>

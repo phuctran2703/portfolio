@@ -1,6 +1,7 @@
 "use client"
 
 import ExperienceCard from "@/components/ui/experience-card"
+import { experiences } from "@/data/resume"
 
 export default function ExperienceSection() {
   return (
@@ -11,20 +12,18 @@ export default function ExperienceSection() {
           <div className="h-px flex-1 bg-border"></div>
         </div>
         <div className="grid gap-6">
-          <ExperienceCard
-            title="AI Engineer Intern"
-            company="Graphicsminer"
-            location="Ho Chi Minh City, Vietnam"
-            type="Full-time"
-            period="May 2024 to August 2024"
-            description="GraphicsMiner is a Human-Computer Interaction (HCI) research lab that focuses on developing AI-powered and simulation-based tools to support teaching and learning."
-            responsibilities={[
-              "Researched and applied core machine learning and statistical modeling techniques in various AI-related projects.",
-              "Participated in developing computer vision solutions, including object detection and image processing.",
-              "Deployed and integrated AI models into web applications, focusing on usability, performance, and scalability.",
-            ]}
-          />
-
+          {experiences.map((exp, index) => (
+            <ExperienceCard
+              key={index}
+              title={exp.title}
+              company={exp.company}
+              location={exp.location}
+              type={exp.type}
+              period={exp.period}
+              description={exp.description}
+              responsibilities={exp.responsibilities}
+            />
+          ))}
         </div>
       </div>
     </section>
