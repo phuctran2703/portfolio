@@ -97,6 +97,7 @@ export const certifications = [
   {
     logo: "logo/coursera.png",
     title: "Convolutional Neural Networks",
+    validity: "15/06/2025",
     link: "https://www.coursera.org/account/accomplishments/certificate/KD09MJ6QH3PJ"
   }
 ];
