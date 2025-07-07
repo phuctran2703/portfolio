@@ -19,7 +19,7 @@ body {
 
 /* Override for introduce section in dark mode */
 .dark #introduce {
-  background: black !important;
+  background: linear-gradient(135deg, #0f172a, #1e293b, #000000) !important; /* slate-900 to slate-800 to black */
 }
 
 .dark #introduce h1,
@@ -47,7 +47,7 @@ body {
 
 /* About section dark mode */
 .dark #about {
-  background: #111827 !important; /* gray-900 */
+  background: linear-gradient(135deg, #111827, #1f2937) !important; /* gray-900 to gray-800 */
 }
 
 .dark #about h2,
@@ -57,7 +57,7 @@ body {
 
 /* Education section dark mode */
 .dark #education {
-  background: black !important;
+  background: linear-gradient(135deg, #000000, #0f172a) !important; /* black to slate-900 */
 }
 
 .dark #education h2,
@@ -67,13 +67,13 @@ body {
 
 .dark #education > div > div > div,
 .dark #education .bg-card {
-  background: transparent !important;
+  background: rgba(31, 41, 55, 0.3) !important; /* gray-800/30 */
   border-color: #374151 !important; /* gray-700 */
 }
 
 /* Experience section dark mode */
 .dark #experience {
-  background: #111827 !important; /* gray-900 - same as About */
+  background: linear-gradient(135deg, #1f2937, #111827) !important; /* gray-800 to gray-900 */
 }
 
 .dark #experience h2,
@@ -89,7 +89,7 @@ body {
 
 /* Projects Section Dark Mode */
 .dark #projects {
-  background-color: #000000 !important; /* gray-900 */
+  background: linear-gradient(135deg, #0f172a, #000000) !important; /* slate-900 to black */
 }
 
 .dark #projects h2,
@@ -103,13 +103,34 @@ body {
 
 /* Project Cards Dark Mode */
 .dark .project-card {
-  background-color: #1f2937 !important; /* gray-800 */
+  background-color: #000000 !important; /* black background */
   border-color: #374151 !important; /* gray-700 */
   color: white !important;
 }
 
 .dark .project-card:hover {
   box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04) !important;
+}
+
+/* Override for project cards in dark mode */
+.dark .bg-white {
+  background-color: #000000 !important; /* Force black background */
+}
+
+.dark .text-gray-900 {
+  color: white !important; /* Force white text */
+}
+
+.dark .text-gray-600 {
+  color: #d1d5db !important; /* gray-300 for better readability */
+}
+
+.dark .bg-gray-100 {
+  background-color: #374151 !important; /* gray-700 for badges */
+}
+
+.dark .text-gray-800 {
+  color: #e5e7eb !important; /* gray-200 for badge text */
 }
 
 /* Project Navigation Buttons Dark Mode */
@@ -150,7 +171,7 @@ body {
 
 /* Skills Section Dark Mode */
 .dark #skills {
-  background: linear-gradient(135deg, #111827, #1f2937, #000000) !important; /* gradient from gray-900 to gray-800 to black */
+  background: linear-gradient(135deg, #111827, #1f2937) !important; /* gray-900 to gray-800 */
 }
 
 .dark #skills h2 {
@@ -179,7 +200,7 @@ body {
 
 /* Contact Section Dark Mode */
 .dark #contact {
-  background: #111827 !important; /* gray-900 */
+  background: linear-gradient(135deg, #0f172a, #000000) !important; /* slate-900 to black */
 }
 
 .dark #contact h2,

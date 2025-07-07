@@ -100,12 +100,12 @@ function CustomModal({
       <div
         ref={modalRef}
         className={cn(
-          "bg-background p-4 sm:p-6 rounded-lg shadow-lg max-h-[90vh] w-full max-w-[95vw] sm:max-w-[600px] overflow-auto dark:bg-gray-800 dark:text-white",
+          "bg-white p-4 sm:p-6 rounded-lg shadow-lg max-h-[90vh] w-full max-w-[95vw] sm:max-w-[600px] overflow-auto dark:bg-black dark:text-white",
           className
         )}
       >
         <div className="flex justify-end">
-          <button onClick={onClose} className="p-1 rounded-full hover:bg-muted dark:hover:bg-gray-700 dark:text-gray-300">
+          <button onClick={onClose} className="p-1 rounded-full hover:bg-muted dark:hover:bg-gray-700 dark:text-gray-300 cursor-pointer">
             <X className="h-4 w-4" />
           </button>
         </div>
@@ -129,7 +129,7 @@ export default function ProjectCard({
     <>
       {/* Custom Card component */}
       <div 
-        className="overflow-hidden group transition-all duration-300 shadow-md hover:shadow-md hover:-translate-y-1 border border-gray-200 border-border bg-card text-card-foreground rounded-lg cursor-pointer dark:bg-gray-800 dark:border-gray-700 dark:text-white dark:hover:shadow-lg dark:hover:shadow-gray-700/20"
+        className="overflow-hidden group transition-all duration-300 shadow-md hover:shadow-md hover:-translate-y-1 border border-gray-200 bg-white text-gray-900 rounded-lg cursor-pointer dark:bg-black dark:border-gray-700 dark:text-white dark:hover:shadow-lg dark:hover:shadow-gray-700/20"
         onClick={() => setIsOpen(true)}
       >
         <div className="relative h-40 sm:h-48 overflow-hidden">
@@ -155,7 +155,7 @@ export default function ProjectCard({
           </p>
           <div className="flex flex-wrap gap-1 mt-2 sm:mt-3">
             {technologies.map((tech, index) => (
-              <CustomBadge key={index} variant="secondary" className="text-xs bg-black text-white dark:bg-gray-600 dark:text-gray-200">
+              <CustomBadge key={index} variant="secondary" className="text-xs bg-gray-100 text-gray-800 dark:bg-gray-700 dark:text-gray-200">
                 {tech}
               </CustomBadge>
             ))}
@@ -203,7 +203,7 @@ export default function ProjectCard({
       <CustomModal isOpen={isOpen} onClose={() => setIsOpen(false)}>
         <div>
           {/* Modal Header */}
-          <div className="mb-4">
+          <div className="mb-4 text-center">
             <h2 className="text-xl font-bold dark:text-white">{title}</h2>
           </div>
 
@@ -220,13 +220,13 @@ export default function ProjectCard({
             <p className="leading-relaxed text-sm sm:text-base dark:text-gray-300">{description}</p>
             <div className="flex flex-wrap gap-1 sm:gap-2">
               {technologies.map((tech, index) => (
-                <CustomBadge key={index} variant="secondary" className="bg-black text-white text-xs dark:bg-gray-600 dark:text-gray-200">
+                <CustomBadge key={index} variant="secondary" className="bg-gray-100 text-gray-800 text-xs dark:bg-gray-700 dark:text-gray-200">
                   {tech}
                 </CustomBadge>
               ))}
             </div>
 
-            <div className="flex flex-wrap gap-2">
+            <div className="flex flex-wrap gap-2 justify-center p-2">
               {githubUrl && (
                 <Button variant="outline" size="sm" asChild className="dark:border-gray-600 dark:text-gray-300 dark:hover:bg-gray-700">
                   <Link

@@ -19,14 +19,14 @@ const CategoryHeading = ({ title }: { title: string }) => (
 
 export default function SkillsSection() {
   return (
-    <section id="skills" className="min-h-[calc(100vh-4rem)] flex scroll-mt-16 px-4 md:px-8 lg:px-20 item-center bg-gradient-to-br from-emerald-50 via-sky-50 to-violet-50 dark:bg-gradient-to-br dark:from-gray-900 dark:via-gray-800 dark:to-black">
+    <section id="skills" className="min-h-[calc(100vh-4rem)] flex scroll-mt-16 p-4 md:px-8 lg:px-20 item-center bg-gradient-to-br from-emerald-50 via-sky-50 to-violet-50 dark:bg-gradient-to-br dark:from-gray-900 dark:via-gray-800 dark:to-black">
       <div className="max-w-4xl mx-auto flex flex-col space-y-8 items-center justify-center">
         <div className="text-center">
           <h2 className="text-2xl md:text-3xl font-extrabold tracking-tight text-gray-800 dark:text-gray-100">
             My Skills
           </h2>
         </div>
-        <div className="w-full rounded-lg border border-gray-200 dark:border-gray-700 bg-white/80 dark:bg-gray-900/50 backdrop-blur-sm text-card-foreground shadow-sm transition-transform duration-300 p-4 sm:p-6 dark:shadow-gray-800/20">
+        <div className="w-full rounded-lg border border-gray-200 dark:border-gray-700 dark:bg-gray-900/50 backdrop-blur-sm text-card-foreground shadow-lg transition-transform duration-300 p-4 sm:p-6 dark:shadow-gray-800/20">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-x-12 gap-y-10">
             <div>
               <ul className="space-y-6">
