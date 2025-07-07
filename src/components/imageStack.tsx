@@ -17,7 +17,7 @@ export default function ImageStack() {
 
   return (
     <div
-      className="relative w-64 h-64 cursor-pointer"
+      className="relative w-48 h-48 sm:w-56 sm:h-56 md:w-64 md:h-64 lg:w-72 lg:h-72 cursor-pointer mx-auto"
       onClick={handleNextImage}
     >
       {currentImages.map((src, index) => (

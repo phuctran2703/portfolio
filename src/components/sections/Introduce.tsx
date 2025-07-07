@@ -11,25 +11,25 @@ export default function IntroduceSection() {
   return (
     <section
       id="introduce"
-      className="min-h-[calc(100vh-4rem)] flex flex-col scroll-mt-20"
+      className="min-h-[calc(100vh-4rem)] flex flex-col justify-center items-center scroll-mt-16 bg-gradient-to-br from-indigo-50 via-white to-cyan-50 px-4 md:px-8 lg:px-20 py-8 md:py-12 box-border"
     >
-      <div className="min-h-[calc(100vh-4rem)] flex flex-col lg:flex-row gap-8 items-center">
-        <div className="md:w-2/3 flex flex-col gap-8 order-2 lg:order-1">
-          <div className="space-y-6">
-            <h1 className="text-3xl md:text-4xl lg:text-6xl font-extrabold tracking-tight text-center lg:text-left">
+      <div className="mx-auto flex flex-col lg:flex-row gap-8 lg:gap-30 items-center">
+        <div className="w-full flex flex-col gap-6 lg:gap-8 order-2 lg:order-1">
+          <div className="space-y-4 lg:space-y-6">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight text-center lg:text-left">
               Hi, I'm{" "}
               <span className="text-blue-600 dark:text-blue-400">
                 {personalInfo.name}
               </span>
             </h1>
-            <h2 className="text-xl md:text-2xl lg:text-3xl font-medium text-muted-foreground dark:text-gray-300 text-center lg:text-left">
+            <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-medium text-muted-foreground dark:text-gray-300 text-center lg:text-left">
               {personalInfo.title}
             </h2>
-            <p className="text-base lg:text-lg text-muted-foreground leading-relaxed md:leading-loose text-justify dark:text-gray-300">
+            <p className="text-sm sm:text-base lg:text-lg text-muted-foreground leading-relaxed md:leading-loose text-justify dark:text-gray-300 max-w-3xl mx-auto lg:mx-0">
               {personalInfo.description}
             </p>
-            <div className="flex flex-col sm:flex-row justify-center lg:justify-between gap-4">
-              <div className="flex flex-col sm:flex-row justify-center lg:justify-start gap-4">
+            <div className="flex flex-col space-y-4 lg:space-y-0 lg:flex-row lg:justify-between lg:items-center gap-4">
+              <div className="flex flex-col sm:flex-row justify-center lg:justify-start gap-3 lg:gap-4">
                 <Button
                   asChild
                   className="transition-all duration-300 hover:translate-y-[-2px] bg-blue-600 hover:bg-blue-700 text-white dark:bg-blue-700 dark:hover:bg-blue-600 hover:shadow-md"
@@ -44,7 +44,7 @@ export default function IntroduceSection() {
                   <Link href="#projects">View Projects</Link>
                 </Button>
               </div>
-              <div className="flex flex-wrap justify-center lg:justify-start gap-4">
+              <div className="flex flex-wrap justify-center lg:justify-start gap-3 lg:gap-4">
                 {" "}
                 <Button
                   variant="outline"
@@ -104,22 +104,9 @@ export default function IntroduceSection() {
             </div>
           </div>
         </div>
-        <div className="flex-1 flex justify-center order-1 lg:order-2">
-          <div className="relative">
-            {/* <Avatar className="w-60 h-60 md:w-72 md:h-72 rounded-full border-4 border-blue-500 dark:border-blue-400 shadow-xl overflow-hidden">
-              <AvatarImage
-                src="/me.png"
-                alt={personalInfo.name}
-                className="object-cover"
-              />
-              <AvatarFallback className="text-6xl font-bold">
-                {personalInfo.name
-                  .split(" ")
-                  .map((n) => n[0])
-                  .join("")}
-              </AvatarFallback>
-            </Avatar> */}
-            <div className="pt-8 lg:pt-0">
+        <div className="w-full lg:w-1/3 flex justify-center order-1 lg:order-2">
+          <div className="relative w-full max-w-xs lg:max-w-sm">
+            <div className="pt-4 lg:pt-0">
             <ImageStack/>
             </div>
           </div>

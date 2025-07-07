@@ -9,7 +9,6 @@ import { cn } from "@/lib/utils";
 
 interface ProjectCardProps {
   title: string;
-  period: string;
   description: string;
   technologies: string[];
   imageUrl: string;
@@ -97,11 +96,11 @@ function CustomModal({
   if (!isOpen) return null;
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50">
+    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 p-4">
       <div
         ref={modalRef}
         className={cn(
-          "bg-background p-6 rounded-lg shadow-lg max-h-[90vh] w-full max-w-[600px] overflow-auto",
+          "bg-background p-4 sm:p-6 rounded-lg shadow-lg max-h-[90vh] w-full max-w-[95vw] sm:max-w-[600px] overflow-auto",
           className
         )}
       >
@@ -118,7 +117,6 @@ function CustomModal({
 
 export default function ProjectCard({
   title,
-  period,
   description,
   technologies,
   imageUrl,
@@ -134,7 +132,7 @@ export default function ProjectCard({
         className="overflow-hidden group transition-all duration-300 shadow-md hover:shadow-md hover:-translate-y-1 border border-gray-200 border-border bg-card text-card-foreground rounded-lg cursor-pointer"
         onClick={() => setIsOpen(true)}
       >
-        <div className="relative h-48 overflow-hidden">
+        <div className="relative h-40 sm:h-48 overflow-hidden">
           <Image
             src={imageUrl || "/placeholder.svg"}
             alt={title}
@@ -144,21 +142,18 @@ export default function ProjectCard({
         </div>
 
         {/* Card Header */}
-        <div className="p-4">
+        <div className="p-3 sm:p-4">
           <div className="flex justify-between items-start">
-            <h3 className="text-xl font-bold tracking-tight">{title}</h3>
-            <p className="text-sm font-medium text-muted-foreground">
-              {period}
-            </p>
+            <h3 className="text-lg sm:text-xl font-bold tracking-tight line-clamp-2">{title}</h3>
           </div>
         </div>
 
         {/* Card Content */}
-        <div className="p-4 pt-0">
-          <p className="text-sm text-gray-600 text-muted-foreground line-clamp-2 leading-relaxed">
+        <div className="p-3 sm:p-4 pt-0">
+          <p className="text-xs sm:text-sm text-gray-600 text-muted-foreground line-clamp-2 leading-relaxed">
             {description}
           </p>
-          <div className="flex flex-wrap gap-1 mt-3">
+          <div className="flex flex-wrap gap-1 mt-2 sm:mt-3">
             {technologies.map((tech, index) => (
               <CustomBadge key={index} variant="secondary" className="text-xs bg-black text-white">
                 {tech}
@@ -168,7 +163,7 @@ export default function ProjectCard({
         </div>
 
         {/* Card Footer */}
-        <div className="p-4 pt-0 flex justify-end">
+        <div className="p-3 sm:p-4 pt-0 flex justify-end">
           <div className="flex gap-2" onClick={(e) => e.stopPropagation()}>
             {githubUrl && (
               <Button
@@ -210,12 +205,9 @@ export default function ProjectCard({
           {/* Modal Header */}
           <div className="mb-4">
             <h2 className="text-xl font-bold">{title}</h2>
-            <p className="text-base font-medium text-muted-foreground">
-              {period}
-            </p>
           </div>
 
-          <div className="relative h-64 w-full overflow-hidden rounded-md">
+          <div className="relative h-48 sm:h-64 w-full overflow-hidden rounded-md">
             <Image
               src={imageUrl || "/placeholder.svg"}
               alt={title}
@@ -224,11 +216,11 @@ export default function ProjectCard({
             />
           </div>
 
-          <div className="space-y-4 mt-4">
-            <p className="leading-relaxed">{description}</p>
-            <div className="flex flex-wrap gap-2">
+          <div className="space-y-3 sm:space-y-4 mt-3 sm:mt-4">
+            <p className="leading-relaxed text-sm sm:text-base">{description}</p>
+            <div className="flex flex-wrap gap-1 sm:gap-2">
               {technologies.map((tech, index) => (
-                <CustomBadge key={index} variant="secondary" className="bg-black text-white">
+                <CustomBadge key={index} variant="secondary" className="bg-black text-white text-xs">
                   {tech}
                 </CustomBadge>
               ))}
@@ -241,9 +233,9 @@ export default function ProjectCard({
                     href={githubUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center gap-2"
+                    className="flex items-center gap-2 text-xs sm:text-sm"
                   >
-                    <Github className="h-4 w-4" />
+                    <Github className="h-3 w-3 sm:h-4 sm:w-4" />
                     GitHub
                   </Link>
                 </Button>
@@ -254,9 +246,9 @@ export default function ProjectCard({
                     href={liveUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center gap-2"
+                    className="flex items-center gap-2 text-xs sm:text-sm"
                   >
-                    <Globe className="h-4 w-4" />
+                    <Globe className="h-3 w-3 sm:h-4 sm:w-4" />
                     Live Demo
                   </Link>
                 </Button>

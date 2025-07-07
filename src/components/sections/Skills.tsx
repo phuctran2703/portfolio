@@ -19,15 +19,14 @@ const CategoryHeading = ({ title }: { title: string }) => (
 
 export default function SkillsSection() {
   return (
-    <section id="skills" className="py-12 scroll-mt-20">
-      <div className="space-y-6">
-        <div className="flex items-center space-x-4">
+    <section id="skills" className="min-h-[calc(100vh-4rem)] flex scroll-mt-16 px-4 md:px-8 lg:px-20 item-center bg-gradient-to-br from-emerald-50 via-sky-50 to-violet-50">
+      <div className="max-w-4xl mx-auto flex flex-col space-y-8 items-center justify-center">
+        <div className="text-center">
           <h2 className="text-2xl md:text-3xl font-extrabold tracking-tight">
-            Skills
+            My Skills
           </h2>
-          <div className="h-px flex-1 bg-border dark:bg-gray-700"></div>
         </div>
-        <div className="rounded-lg border border-gray-200 dark:border-gray-800 bg-card text-card-foreground shadow-sm transition-transform duration-300 hover:shadow-md hover:-translate-y-1 p-4 sm:p-6">
+        <div className="w-full rounded-lg border border-gray-200 dark:border-gray-800 bg-card text-card-foreground shadow-sm transition-transform duration-300 p-4 sm:p-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-x-12 gap-y-10">
             <div>
               <ul className="space-y-6">

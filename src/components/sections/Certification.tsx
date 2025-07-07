@@ -4,13 +4,12 @@ import { certifications } from "@/data/resume";
 
 export default function CertificationSection() {
   return (
-    <section id="certification" className="py-12 scroll-mt-20">
-      <div className="space-y-6">
-        <div className="flex items-center space-x-4">
-          <h2 className="text-3xl font-extrabold tracking-tight">
+    <section id="certification" className="py-12 scroll-mt-20 px-4 md:px-8 lg:px-20">
+      <div className="flex flex-col space-y-6 justify-center items-center">
+        <div className="space-x-4">
+          {/* <h2 className="text-3xl font-extrabold tracking-tight">
             Certifications
-          </h2>
-          <div className="h-px flex-1 bg-border"></div>
+          </h2> */}
         </div>
         {certifications.map((cert, index) => (
           <div

@@ -12,12 +12,11 @@ export default function Header() {
   
   // Define navigation links
   const navLinks = [
-    { href: "#introduce", label: "About" },
+    { href: "#about", label: "About" },
     { href: "#education", label: "Education" },
-    { href: "#skills", label: "Skills" },
-    { href: "#certification", label: "Certification" },
     { href: "#experience", label: "Experience" },
     { href: "#projects", label: "Projects" },
+    { href: "#skills", label: "Skills" },
     { href: "#contact", label: "Contact" },
   ];
 
@@ -47,7 +46,19 @@ export default function Header() {
     <header className="h-16 sticky top-0 z-40 w-full px-4 md:px-8 lg:px-20 shadow bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container flex h-16 items-center justify-between">
         <div className="flex items-center gap-2">
-          <span className="text-lg md:text-xl font-bold tracking-tight">{personalInfo.name.toUpperCase()}</span>
+          <Link 
+            href="#" 
+            className="transition-colors hover:text-primary cursor-pointer"
+            onClick={(e) => {
+              e.preventDefault();
+              window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+              });
+            }}
+          >
+            <span className="text-lg md:text-xl font-bold tracking-tight">{personalInfo.name.toUpperCase()}</span>
+          </Link>
         </div>
         
         {/* Desktop navigation */}

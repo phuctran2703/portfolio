@@ -5,18 +5,18 @@ import { experiences } from "@/data/resume"
 
 export default function ExperienceSection() {
   return (
-    <section id="experience" className="py-12 scroll-mt-20">
-      <div className="space-y-6">
-        <div className="flex items-center space-x-4">
-          <h2 className="text-3xl font-extrabold tracking-tight">Work Experience</h2>
-          <div className="h-px flex-1 bg-border"></div>
+    <section id="experience" className="min-h-[calc(100vh-4rem)] py-16 md:py-20 scroll-mt-16 px-4 md:px-8 lg:px-20">
+      <div className="max-w-4xl mx-auto flex flex-col space-y-8 items-center justify-center">
+        <div className="flex items-center space-x-4 text-center">
+          <h2 className="text-2xl md:text-3xl font-extrabold tracking-tight">Work Experience</h2>
         </div>
-        <div className="grid gap-6">
+        <div className="w-full space-y-6">
           {experiences.map((exp, index) => (
             <ExperienceCard
               key={index}
               title={exp.title}
               company={exp.company}
+              logo={exp.logo}
               location={exp.location}
               type={exp.type}
               period={exp.period}
