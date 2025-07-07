@@ -32,7 +32,7 @@ function CustomBadge({
     default: "bg-blue-600 text-blue-600-foreground",
     secondary: "bg-secondary text-secondary-foreground",
     outline:
-      "border border-gray-100 bg-background hover:bg-accent hover:text-accent-foreground",
+      "border border-gray-100 bg-background hover:bg-accent hover:text-accent-foreground dark:border-gray-700 dark:bg-gray-800 dark:text-gray-200",
   };
 
   return (
@@ -100,12 +100,12 @@ function CustomModal({
       <div
         ref={modalRef}
         className={cn(
-          "bg-background p-4 sm:p-6 rounded-lg shadow-lg max-h-[90vh] w-full max-w-[95vw] sm:max-w-[600px] overflow-auto",
+          "bg-background p-4 sm:p-6 rounded-lg shadow-lg max-h-[90vh] w-full max-w-[95vw] sm:max-w-[600px] overflow-auto dark:bg-gray-800 dark:text-white",
           className
         )}
       >
         <div className="flex justify-end">
-          <button onClick={onClose} className="p-1 rounded-full hover:bg-muted">
+          <button onClick={onClose} className="p-1 rounded-full hover:bg-muted dark:hover:bg-gray-700 dark:text-gray-300">
             <X className="h-4 w-4" />
           </button>
         </div>
@@ -129,7 +129,7 @@ export default function ProjectCard({
     <>
       {/* Custom Card component */}
       <div 
-        className="overflow-hidden group transition-all duration-300 shadow-md hover:shadow-md hover:-translate-y-1 border border-gray-200 border-border bg-card text-card-foreground rounded-lg cursor-pointer"
+        className="overflow-hidden group transition-all duration-300 shadow-md hover:shadow-md hover:-translate-y-1 border border-gray-200 border-border bg-card text-card-foreground rounded-lg cursor-pointer dark:bg-gray-800 dark:border-gray-700 dark:text-white dark:hover:shadow-lg dark:hover:shadow-gray-700/20"
         onClick={() => setIsOpen(true)}
       >
         <div className="relative h-40 sm:h-48 overflow-hidden">
@@ -144,18 +144,18 @@ export default function ProjectCard({
         {/* Card Header */}
         <div className="p-3 sm:p-4">
           <div className="flex justify-between items-start">
-            <h3 className="text-lg sm:text-xl font-bold tracking-tight line-clamp-2">{title}</h3>
+            <h3 className="text-lg sm:text-xl font-bold tracking-tight line-clamp-2 dark:text-white">{title}</h3>
           </div>
         </div>
 
         {/* Card Content */}
         <div className="p-3 sm:p-4 pt-0">
-          <p className="text-xs sm:text-sm text-gray-600 text-muted-foreground line-clamp-2 leading-relaxed">
+          <p className="text-xs sm:text-sm text-gray-600 text-muted-foreground line-clamp-2 leading-relaxed dark:text-gray-300">
             {description}
           </p>
           <div className="flex flex-wrap gap-1 mt-2 sm:mt-3">
             {technologies.map((tech, index) => (
-              <CustomBadge key={index} variant="secondary" className="text-xs bg-black text-white">
+              <CustomBadge key={index} variant="secondary" className="text-xs bg-black text-white dark:bg-gray-600 dark:text-gray-200">
                 {tech}
               </CustomBadge>
             ))}
@@ -169,7 +169,7 @@ export default function ProjectCard({
               <Button
                 variant="ghost"
                 size="icon"
-                className="transition-all duration-200 hover:bg-primary/10 hover:text-blue-600 border border-gray-300 rounded-full"
+                className="transition-all duration-200 hover:bg-primary/10 hover:text-blue-600 border border-gray-300 rounded-full dark:border-gray-600 dark:text-gray-300 dark:hover:bg-gray-700 dark:hover:text-blue-400"
                 asChild
               >
                 <Link
@@ -186,7 +186,7 @@ export default function ProjectCard({
               <Button
                 variant="ghost"
                 size="icon"
-                className="transition-all duration-200 hover:bg-primary/10 hover:text-blue-600 border border-gray-300 rounded-full"
+                className="transition-all duration-200 hover:bg-primary/10 hover:text-blue-600 border border-gray-300 rounded-full dark:border-gray-600 dark:text-gray-300 dark:hover:bg-gray-700 dark:hover:text-blue-400"
                 asChild
               >
                 <Link href={liveUrl} target="_blank" rel="noopener noreferrer">
@@ -204,7 +204,7 @@ export default function ProjectCard({
         <div>
           {/* Modal Header */}
           <div className="mb-4">
-            <h2 className="text-xl font-bold">{title}</h2>
+            <h2 className="text-xl font-bold dark:text-white">{title}</h2>
           </div>
 
           <div className="relative h-48 sm:h-64 w-full overflow-hidden rounded-md">
@@ -217,10 +217,10 @@ export default function ProjectCard({
           </div>
 
           <div className="space-y-3 sm:space-y-4 mt-3 sm:mt-4">
-            <p className="leading-relaxed text-sm sm:text-base">{description}</p>
+            <p className="leading-relaxed text-sm sm:text-base dark:text-gray-300">{description}</p>
             <div className="flex flex-wrap gap-1 sm:gap-2">
               {technologies.map((tech, index) => (
-                <CustomBadge key={index} variant="secondary" className="bg-black text-white text-xs">
+                <CustomBadge key={index} variant="secondary" className="bg-black text-white text-xs dark:bg-gray-600 dark:text-gray-200">
                   {tech}
                 </CustomBadge>
               ))}
@@ -228,7 +228,7 @@ export default function ProjectCard({
 
             <div className="flex flex-wrap gap-2">
               {githubUrl && (
-                <Button variant="outline" size="sm" asChild>
+                <Button variant="outline" size="sm" asChild className="dark:border-gray-600 dark:text-gray-300 dark:hover:bg-gray-700">
                   <Link
                     href={githubUrl}
                     target="_blank"
@@ -241,7 +241,7 @@ export default function ProjectCard({
                 </Button>
               )}
               {liveUrl && (
-                <Button variant="outline" size="sm" asChild>
+                <Button variant="outline" size="sm" asChild className="dark:border-gray-600 dark:text-gray-300 dark:hover:bg-gray-700">
                   <Link
                     href={liveUrl}
                     target="_blank"

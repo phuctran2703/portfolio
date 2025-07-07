@@ -17,6 +17,225 @@ body {
   transition: background 0.2s ease-in-out, color 0.2s ease-in-out;
 }
 
+/* Override for introduce section in dark mode */
+.dark #introduce {
+  background: black !important;
+}
+
+.dark #introduce h1,
+.dark #introduce h2, 
+.dark #introduce p {
+  color: white !important;
+}
+
+.dark #introduce h1 span {
+  background: linear-gradient(135deg, #60a5fa, #34d399) !important; /* Gradient xanh dương đến xanh lá */
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  background-clip: text !important;
+  color: transparent !important;
+}
+
+/* Apply same gradient to header name */
+.dark header span {
+  background: linear-gradient(135deg, #60a5fa, #34d399) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  background-clip: text !important;
+  color: transparent !important;
+}
+
+/* About section dark mode */
+.dark #about {
+  background: #111827 !important; /* gray-900 */
+}
+
+.dark #about h2,
+.dark #about p {
+  color: white !important;
+}
+
+/* Education section dark mode */
+.dark #education {
+  background: black !important;
+}
+
+.dark #education h2,
+.dark #education h3 {
+  color: white !important;
+}
+
+.dark #education > div > div > div,
+.dark #education .bg-card {
+  background: transparent !important;
+  border-color: #374151 !important; /* gray-700 */
+}
+
+/* Experience section dark mode */
+.dark #experience {
+  background: #111827 !important; /* gray-900 - same as About */
+}
+
+.dark #experience h2,
+.dark #experience h3,
+.dark #experience h4 {
+  color: white !important;
+}
+
+.dark #experience p,
+.dark #experience li {
+  color: #d1d5db !important; /* gray-300 - lighter gray */
+}
+
+/* Projects Section Dark Mode */
+.dark #projects {
+  background-color: #000000 !important; /* gray-900 */
+}
+
+.dark #projects h2,
+.dark #projects h3 {
+  color: white !important;
+}
+
+.dark #projects p {
+  color: #d1d5db !important; /* gray-300 */
+}
+
+/* Project Cards Dark Mode */
+.dark .project-card {
+  background-color: #1f2937 !important; /* gray-800 */
+  border-color: #374151 !important; /* gray-700 */
+  color: white !important;
+}
+
+.dark .project-card:hover {
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04) !important;
+}
+
+/* Project Navigation Buttons Dark Mode */
+.dark .project-nav-button {
+  background-color: rgba(31, 41, 55, 0.8) !important; /* gray-800/80 */
+  border-color: #4b5563 !important; /* gray-600 */
+  color: #d1d5db !important; /* gray-300 */
+}
+
+.dark .project-nav-button:hover {
+  background-color: #2563eb !important; /* blue-600 */
+  border-color: #2563eb !important; /* blue-600 */
+  color: white !important;
+}
+
+/* Project Pagination Dots Dark Mode */
+.dark .project-pagination-dot {
+  background-color: #4b5563 !important; /* gray-600 */
+}
+
+.dark .project-pagination-dot:hover {
+  background-color: #6b7280 !important; /* gray-500 */
+}
+
+.dark .project-pagination-dot.active {
+  background-color: #3b82f6 !important; /* blue-500 */
+}
+
+/* Project Modal Dark Mode */
+.dark .project-modal {
+  background-color: #1f2937 !important; /* gray-800 */
+  color: white !important;
+}
+
+.dark .project-modal .close-button:hover {
+  background-color: #374151 !important; /* gray-700 */
+}
+
+/* Skills Section Dark Mode */
+.dark #skills {
+  background: linear-gradient(135deg, #111827, #1f2937, #000000) !important; /* gradient from gray-900 to gray-800 to black */
+}
+
+.dark #skills h2 {
+  color: white !important;
+}
+
+.dark #skills .bg-white\/80 {
+  background: rgba(31, 41, 55, 0.5) !important; /* gray-800/50 */
+  border-color: #374151 !important; /* gray-700 */
+}
+
+.dark #skills .bg-blue-600 {
+  background: #374151 !important; /* gray-700 */
+  color: #e5e7eb !important; /* gray-200 */
+  border-color: #4b5563 !important; /* gray-600 */
+}
+
+.dark #skills .bg-blue-600:hover {
+  background: #4b5563 !important; /* gray-600 */
+  color: white !important;
+}
+
+.dark #skills .text-gray-800 {
+  color: #e5e7eb !important; /* gray-200 */
+}
+
+/* Contact Section Dark Mode */
+.dark #contact {
+  background: #111827 !important; /* gray-900 */
+}
+
+.dark #contact h2,
+.dark #contact h3 {
+  color: white !important;
+}
+
+.dark #contact .text-muted-foreground {
+  color: #d1d5db !important; /* gray-300 - lighter gray */
+}
+
+.dark #contact .bg-card {
+  background: rgba(31, 41, 55, 0.8) !important; /* gray-800/80 */
+  border-color: #374151 !important; /* gray-700 */
+}
+
+.dark #contact .text-blue-600 {
+  color: white !important; /* Change icons to white */
+}
+
+.dark #contact .text-blue-400 {
+  color: white !important; /* Change icons to white */
+}
+
+.dark #contact input,
+.dark #contact textarea {
+  background: #374151 !important; /* gray-700 */
+  border-color: #4b5563 !important; /* gray-600 */
+  color: white !important;
+}
+
+.dark #contact input::placeholder,
+.dark #contact textarea::placeholder {
+  color: #9ca3af !important; /* gray-400 */
+}
+
+.dark #contact label {
+  color: #e5e7eb !important; /* gray-200 */
+}
+
+.dark #contact .bg-red-50 {
+  background: #7f1d1d !important; /* red-900 */
+}
+
+.dark #contact .bg-green-50 {
+  background: #14532d !important; /* green-900 */
+}
+
+.dark #contact .text-red-800 {
+  color: #fca5a5 !important; /* red-300 */
+}
+
+.dark #contact .text-green-800 {
+  color: #86efac !important; /* green-300 */
+}
+
 /* Responsive improvements */
 @media (max-width: 640px) {
   .line-clamp-2 {

@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { useState } from "react";
 
-const images = ["/me/1.png", "/me/2.jpg", "/me/4.jpg"];
+const images = ["/me/1.jpg", "/me/2.png", "/me/4.jpg"];
 
 export default function ImageStack() {
   const [currentImages, setcurrentImages] = useState(images);

@@ -14,21 +14,21 @@ export default function ContactSection() {
     message: "",
   });
   return (
-    <section id="contact" className="py-16 md:py-20 scroll-mt-16 px-4 md:px-8 lg:px-20">
+    <section id="contact" className="py-16 md:py-20 scroll-mt-16 px-4 md:px-8 lg:px-20 dark:!bg-gray-900">
       <div className="max-w-6xl mx-auto space-y-8 flex flex-col items-center justify-center">
         <div className="text-center">
-          <h2 className="text-2xl md:text-3xl font-extrabold tracking-tight">
+          <h2 className="text-2xl md:text-3xl font-extrabold tracking-tight dark:!text-white">
             Get In Touch
           </h2>
         </div>
         <div className="w-full grid grid-cols-1 lg:grid-cols-2 gap-8">
           {/* Contact Information Card */}
-          <div className="rounded-lg border border-gray-100 bg-card text-card-foreground shadow-sm">
+          <div className="rounded-lg border border-gray-100 bg-card text-card-foreground shadow-sm dark:!bg-transparent dark:!border-gray-700 dark:!text-white">
             <div className="flex flex-col space-y-1.5 p-6 pb-2">
-              <h3 className="text-2xl font-bold leading-none tracking-tight">
+              <h3 className="text-2xl font-bold leading-none tracking-tight dark:!text-white">
                 Contact Information
               </h3>
-              <p className="text-base text-muted-foreground">
+              <p className="text-base text-muted-foreground dark:!text-gray-300">
                 Feel free to reach out through any of these channels
               </p>
             </div>
@@ -37,13 +37,13 @@ export default function ContactSection() {
                 <Button
                   variant="outline"
                   size="icon"
-                  className="rounded-full text-blue-600 shrink-0"
+                  className="rounded-full text-blue-600 shrink-0 dark:text-blue-400 dark:border-gray-600 dark:hover:bg-gray-700"
                 >
                   <Mail className="h-5 w-5" />
                 </Button>
                 <div>
-                  <p className="font-semibold text-base">Email</p>
-                  <p className="text-sm text-muted-foreground">
+                  <p className="font-semibold text-base dark:text-white">Email</p>
+                  <p className="text-sm text-muted-foreground dark:text-gray-300">
                     {personalInfo.email}
                   </p>
                 </div>
@@ -52,19 +52,19 @@ export default function ContactSection() {
                 <Button
                   variant="outline"
                   size="icon"
-                  className="rounded-full text-blue-600 shrink-0"
+                  className="rounded-full text-blue-600 shrink-0 dark:text-blue-400 dark:border-gray-600 dark:hover:bg-gray-700"
                 >
                   <Phone className="h-5 w-5" />
                 </Button>
                 <div>
-                  <p className="font-semibold text-base">Phone</p>
-                  <p className="text-sm text-muted-foreground">
+                  <p className="font-semibold text-base dark:text-white">Phone</p>
+                  <p className="text-sm text-muted-foreground dark:text-gray-300">
                     {personalInfo.phone}
                   </p>
                 </div>
               </div>
               <div className="pt-4">
-                <p className="font-semibold text-base mb-3">Social Profiles</p>
+                <p className="font-semibold text-base mb-3 dark:text-white">Social Profiles</p>
                 <div className="flex gap-3">
                   <Link
                     href={personalInfo.socials.github}
@@ -75,12 +75,12 @@ export default function ContactSection() {
                       <Button
                         variant="outline"
                         size="icon"
-                        className="rounded-full transition-all duration-300 hover:bg-accent hover:scale-110 hover:bg-blue-500 hover:text-white hover:cursor-pointer text-blue-600"
+                        className="rounded-full transition-all duration-300 hover:bg-accent hover:scale-110 hover:bg-blue-500 hover:text-white hover:cursor-pointer text-blue-600 dark:text-blue-400 dark:border-gray-600 dark:hover:bg-blue-600 dark:hover:border-blue-600"
                       >
                         <Github className="h-5 w-5" />
                         <span className="sr-only">GitHub</span>
                       </Button>
-                      <div className="absolute -top-8 left-1/2 -translate-x-1/2 bg-black text-white px-2 py-1 rounded text-xs opacity-0 group-hover:opacity-100 transition-opacity">
+                      <div className="absolute -top-8 left-1/2 -translate-x-1/2 bg-black text-white px-2 py-1 rounded text-xs opacity-0 group-hover:opacity-100 transition-opacity dark:bg-gray-700">
                         GitHub
                       </div>
                     </div>
@@ -94,7 +94,7 @@ export default function ContactSection() {
                       <Button
                         variant="outline"
                         size="icon"
-                        className="rounded-full transition-all duration-300 hover:bg-accent hover:scale-110 hover:bg-blue-500 hover:text-white hover:cursor-pointer text-blue-600"
+                        className="rounded-full transition-all duration-300 hover:bg-accent hover:scale-110 hover:bg-blue-500 hover:text-white hover:cursor-pointer text-blue-600 dark:text-blue-400 dark:border-gray-600 dark:hover:bg-blue-600 dark:hover:border-blue-600"
                       >
                         <Linkedin className="h-5 w-5" />
                         <span className="sr-only">LinkedIn</span>

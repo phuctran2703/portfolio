@@ -57,7 +57,7 @@ export default function Header() {
               });
             }}
           >
-            <span className="text-lg md:text-xl font-bold tracking-tight">{personalInfo.name.toUpperCase()}</span>
+            <span className="text-lg md:text-xl font-bold tracking-tight text-blue-700 dark:!text-emerald-400">{personalInfo.name.toUpperCase()}</span>
           </Link>
         </div>
         
