@@ -59,7 +59,7 @@ export const projects = [
     description: "A microservice-based platform for real-time traffic monitoring and management, offering features like camera control, user feedback, news updates, and AI-powered chat support. It helps authorities and citizens make informed decisions to improve traffic flow and urban mobility.",
     technologies: ["Next.js", "FastAPI", "MongoDB", "Redis", "JWT ", "Docker", "Azure"],
     imageUrl: "/projects/traffic.png",
-    githubUrl: "https://github.com/Mr-Yang03/Smart-Traffic-Management-System",
+    githubUrl: "https://github.com/phuctran2703/Smart-Traffic-Management-System",
     liveUrl: ""
   },
   {
@@ -67,7 +67,7 @@ export const projects = [
     description: "This project develops a mobile application for a smart greenhouse system. The functionalities include monitoring greenhouse conditions, controlling devices, diagnosing plant leaf diseases, and enabling automation through user’s voice. It integrates AI-powered disease detection and real-time IoT-based control for smart farming.",
     technologies: ["React Native", "NodeJS", "MongoDB", "CNN Models"],
     imageUrl: "/projects/tomato.png",
-    githubUrl: "https://github.com/pnv2003/yolo-farm",
+    githubUrl: "https://github.com/phuctran2703/yolo-farm",
     liveUrl: ""
   },
   {
