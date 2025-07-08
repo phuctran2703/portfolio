@@ -95,7 +95,7 @@ export default function Header() {
 
       {/* Mobile navigation */}
       {mobileMenuOpen && (
-        <div className="md:hidden absolute top-16 left-0 right-0 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/80 shadow-lg py-4 px-4 z-50">
+        <div className="md:hidden absolute top-16 left-0 right-0 bg-white dark:bg-black shadow-lg py-4 px-4 z-50">
           <nav className="flex flex-col space-y-4">
             {navLinks.map((link) => (
               <Link 
